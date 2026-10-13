@@ -13,6 +13,8 @@
 
 [**shelfwatch**](https://github.com/qweendev/shelfwatch) is a Telegram bot that tells you when something is back in stock or gets cheaper. You send it a link and it does the rest.
 
+[**spendlog**](https://github.com/qweendev/spendlog) is an expense tracker that lives in Telegram. You type «250 taxi» and a Mini App shows where the money went this month.
+
 ### Stack
 
 <p align="center">
