@@ -1,0 +1,11 @@
+{
+  "type": "normal",
+  "fileName": "profile-ink.svg",
+  "backgroundColor": "#0B0F14",
+  "foregroundColor": "#B7C9CF",
+  "strongColor": "#E8EEF0",
+  "weakColor": "#5B6F78",
+  "radarColor": "#E0465E",
+  "growingAnimation": true,
+  "contribColors": ["#141B22", "#2B3A44", "#4F6772", "#8FA6AE", "#E0465E"]
+}

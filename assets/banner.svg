@@ -1,0 +1,167 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 400" width="1280" height="400" role="img" aria-label="qweendev">
+  <style>
+    .mono { font-family: 'JetBrains Mono', 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace; }
+    .title { font-size: 96px; font-weight: 800; letter-spacing: -2px; }
+    .glitch-a { animation: glitch-a 7s infinite steps(1); }
+    .glitch-b { animation: glitch-b 7s infinite steps(1); }
+    @keyframes glitch-a {
+      0%, 90%, 100% { transform: translate(0, 0); opacity: 0; }
+      91% { transform: translate(-5px, 2px); opacity: .85; }
+      93% { transform: translate(4px, -1px); opacity: .85; }
+      95% { transform: translate(-2px, 0); opacity: .85; }
+      96% { opacity: 0; }
+    }
+    @keyframes glitch-b {
+      0%, 90%, 100% { transform: translate(0, 0); opacity: 0; }
+      91% { transform: translate(5px, -2px); opacity: .7; }
+      93% { transform: translate(-3px, 2px); opacity: .7; }
+      95% { transform: translate(2px, 1px); opacity: .7; }
+      96% { opacity: 0; }
+    }
+    .cursor { animation: blink 1s infinite steps(1); }
+    @keyframes blink { 50% { opacity: 0; } }
+    .eye { transform-origin: 980px 200px; animation: blink-eye 6s infinite; }
+    @keyframes blink-eye {
+      0%, 46%, 54%, 100% { transform: scaleY(1); }
+      50% { transform: scaleY(.06); }
+    }
+    .pulse { animation: pulse 3s ease-in-out infinite; }
+    @keyframes pulse { 50% { opacity: .35; } }
+  </style>
+
+  <defs>
+    <pattern id="tone" width="7" height="7" patternUnits="userSpaceOnUse">
+      <circle cx="3.5" cy="3.5" r="1.1" fill="#B7C9CF"/>
+    </pattern>
+    <radialGradient id="tone-fade" cx="77%" cy="50%" r="55%">
+      <stop offset="0" stop-color="#fff" stop-opacity=".22"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <mask id="tone-mask"><rect width="1280" height="400" fill="url(#tone-fade)"/></mask>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#B7C9CF" stroke-opacity=".05"/>
+    </pattern>
+    <linearGradient id="scan" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#B7C9CF" stop-opacity="0"/>
+      <stop offset="1" stop-color="#B7C9CF" stop-opacity=".18"/>
+    </linearGradient>
+    <linearGradient id="horn" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#B7C9CF"/>
+      <stop offset="1" stop-color="#E8EEF0"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="type-clip">
+      <rect x="80" y="262" height="30" width="0">
+        <animate attributeName="width" values="0;370;370;0" keyTimes="0;.45;.9;1" dur="9s" repeatCount="indefinite" calcMode="discrete"/>
+      </rect>
+    </clipPath>
+    <path id="ring" d="M-163 0A163 163 0 1 1 163 0A163 163 0 1 1 -163 0"/>
+  </defs>
+
+  <rect width="1280" height="400" fill="#0B0F14"/>
+  <rect width="1280" height="400" fill="url(#grid)"/>
+  <rect width="1280" height="400" fill="url(#tone)" mask="url(#tone-mask)"/>
+
+  <!-- sigil -->
+  <g transform="translate(980 200)" fill="none" stroke="#B7C9CF">
+    <circle r="176" stroke-opacity=".07"/>
+    <g class="mono" fill="#B7C9CF" fill-opacity=".42" stroke="none" font-size="10" letter-spacing="3.2">
+      <text><textPath href="#ring">QWEENDEV · SEAL OF THE THIRD EYE · APIS · BOTS · MINI APPS · OLD CODE MADE NEW · 0x1B7C ·</textPath></text>
+      <animateTransform attributeName="transform" type="rotate" from="0" to="-360" dur="140s" repeatCount="indefinite"/>
+    </g>
+    <circle r="152" stroke-opacity=".2"/>
+    <circle r="146" stroke-width="8" stroke-opacity=".3" stroke-dasharray="1 6.65">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="90s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="146" stroke-width="16" stroke-opacity=".6" stroke-dasharray="2 74.45">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="90s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="132" stroke-opacity=".45"/>
+    <g>
+      <circle cx="0" cy="-132" r="5" fill="#E0465E" stroke="none" filter="url(#glow)"/>
+      <circle cx="0" cy="-132" r="10" stroke="#E0465E" stroke-opacity=".5"/>
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="14s" repeatCount="indefinite"/>
+    </g>
+    <circle r="120" stroke-width="3" stroke-opacity=".6" stroke-dasharray="70 12 6 12">
+      <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="40s" repeatCount="indefinite"/>
+    </circle>
+    <g stroke-opacity=".6">
+      <path d="M0 -112 L97 56 L-97 56 Z"/>
+      <path d="M0 112 L97 -56 L-97 -56 Z"/>
+      <path d="M0 -60 L52 -30 L52 30 L0 60 L-52 30 L-52 -30 Z" stroke-opacity=".45"/>
+      <g stroke-opacity=".3" stroke-dasharray="3 4" class="pulse">
+        <path d="M0 -60V-112M52 -30L97 -56M52 30L97 56M0 60V112M-52 30L-97 56M-52 -30L-97 -56"/>
+      </g>
+      <g fill="#0B0F14" stroke-opacity=".8">
+        <circle cx="0" cy="-112" r="4"/><circle cx="97" cy="56" r="4"/><circle cx="-97" cy="56" r="4"/>
+        <circle cx="0" cy="112" r="4"/><circle cx="97" cy="-56" r="4"/><circle cx="-97" cy="-56" r="4"/>
+      </g>
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="120s" repeatCount="indefinite"/>
+    </g>
+  </g>
+
+  <!-- horns -->
+  <g stroke="#0B0F14" stroke-width="2">
+    <path d="M922 96 C 892 62, 870 30, 838 0 C 884 20, 926 52, 954 82 Z" fill="url(#horn)"/>
+    <path d="M1038 96 C 1068 62, 1090 30, 1122 0 C 1076 20, 1034 52, 1006 82 Z" fill="url(#horn)"/>
+    <g fill="none" stroke-opacity=".55" stroke-width="1.5">
+      <path d="M906 76 Q918 70 934 74M890 54 Q902 46 916 50M874 32 Q884 26 896 28"/>
+      <path d="M1054 76 Q1042 70 1026 74M1070 54 Q1058 46 1044 50M1086 32 Q1076 26 1064 28"/>
+    </g>
+  </g>
+
+  <!-- third eye -->
+  <g class="eye">
+    <path d="M922 200 Q980 154 1038 200 Q980 246 922 200 Z" fill="#0B0F14" stroke="#E8EEF0" stroke-width="2.5"/>
+    <g fill="none" stroke="#B7C9CF">
+      <circle cx="980" cy="200" r="30" stroke-width="2"/>
+      <circle cx="980" cy="200" r="21" stroke-opacity=".8"/>
+      <circle cx="980" cy="200" r="12" stroke-opacity=".6"/>
+    </g>
+    <circle cx="980" cy="200" r="5" fill="#E0465E" filter="url(#glow)"/>
+  </g>
+
+  <!-- hud -->
+  <g class="mono" fill="#B7C9CF" font-size="13" letter-spacing="2">
+    <text x="80" y="92" fill-opacity=".55">SYS://QWEENDEV · SEAL 01 · ONLINE</text>
+    <circle cx="68" cy="88" r="4" fill="#E0465E" class="pulse"/>
+    <text x="80" y="352" fill-opacity=".4">// ink · code · old gods</text>
+  </g>
+
+  <!-- title -->
+  <g class="mono title">
+    <text x="76" y="196" fill="#E0465E" class="glitch-a">qweendev</text>
+    <text x="76" y="196" fill="#7FD4E6" class="glitch-b">qweendev</text>
+    <text x="76" y="196" fill="#E8EEF0">qweendev</text>
+  </g>
+
+  <!-- hanko seal -->
+  <g transform="translate(590 112) rotate(-8)">
+    <rect x="-26" y="-26" width="52" height="52" rx="6" fill="none" stroke="#E0465E" stroke-width="3"/>
+    <text x="0" y="12" text-anchor="middle" font-size="34" font-weight="700" fill="#E0465E" font-family="'Hiragino Mincho ProN','Yu Mincho','Noto Serif CJK JP',serif">鬼</text>
+  </g>
+
+  <text x="80" y="238" class="mono" font-size="22" fill="#8FA6AE">python · fastapi · telegram bots &amp; mini apps</text>
+
+  <g class="mono" font-size="18">
+    <text x="80" y="284" fill="#B7C9CF" clip-path="url(#type-clip)">&gt; shipping apis, bots &amp; mini apps</text>
+    <rect x="80" y="268" width="10" height="20" fill="#E0465E" class="cursor">
+      <animate attributeName="x" values="80;444;444;80" keyTimes="0;.45;.9;1" dur="9s" repeatCount="indefinite" calcMode="discrete"/>
+    </rect>
+  </g>
+
+  <!-- frame -->
+  <g fill="none" stroke="#B7C9CF" stroke-opacity=".5" stroke-width="2">
+    <path d="M24 56V24H56"/>
+    <path d="M1224 24H1256V56"/>
+    <path d="M24 344V376H56"/>
+    <path d="M1256 344V376H1224"/>
+  </g>
+
+  <rect width="1280" height="60" fill="url(#scan)">
+    <animate attributeName="y" values="-60;400" dur="5s" repeatCount="indefinite"/>
+  </rect>
+</svg>
