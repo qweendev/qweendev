@@ -15,6 +15,8 @@
 
 [**spendlog**](https://github.com/qweendev/spendlog) is an expense tracker that lives in Telegram. You type «250 taxi» and a Mini App shows where the money went this month.
 
+[**vk2tg**](https://github.com/qweendev/vk2tg) moves new posts from VK communities to Telegram channels with photos, polls and reposts.
+
 ### Stack
 
 <p align="center">
