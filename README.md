@@ -9,6 +9,12 @@
 
 <p align="center">Python backend developer · Telegram bots, Mini Apps, FastAPI</p>
 
+### Projects
+
+[**shelfwatch**](https://github.com/qweendev/shelfwatch) is a Telegram bot that tells you when something is back in stock or gets cheaper. You send it a link and it does the rest.
+
+### Stack
+
 <p align="center">
   <img src="https://img.shields.io/badge/python-0B0F14?style=flat-square&logo=python&logoColor=B7C9CF" alt="python">
   <img src="https://img.shields.io/badge/fastapi-0B0F14?style=flat-square&logo=fastapi&logoColor=B7C9CF" alt="fastapi">
