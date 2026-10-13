@@ -30,9 +30,9 @@ jobs:
 
       - name: Publish to output branch
         run: |
-          mkdir -p dist
-          cp profile-3d-contrib/profile-ink.svg dist/
-          cd dist
+          mkdir -p out
+          cp dist/snake.svg profile-3d-contrib/profile-ink.svg out/
+          cd out
           git init -q -b output
           git config user.name github-actions
           git config user.email github-actions@github.com
